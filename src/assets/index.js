@@ -7,6 +7,11 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import b1 from "./about/b1.svg";
+import b4 from "./about/b4.svg";
+import b5 from "./about/b5.svg";
+import grid from "./about/grid.svg";
+
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -37,6 +42,10 @@ export {
   github,
   menu,
   close,
+  b1,
+  b4,
+  b5,
+  grid,
   css,
   docker,
   figma,
