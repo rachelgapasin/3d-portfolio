@@ -3,11 +3,10 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
-  Works,
+  Projects,
   StarsCanvas,
 } from "./components";
 
@@ -19,13 +18,12 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <div className="relative bg-primary flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+        <div className="relative bg-primary flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 py-24">
           <div className="max-w-7xl w-full">
             <About />
-            <Experience />
+            <Projects />
             <Tech />
-            <Works />
-            <Feedbacks />
+            <Experience />
             <div className="relative z-0">
               <Contact />
               <StarsCanvas />

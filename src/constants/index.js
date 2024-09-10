@@ -86,7 +86,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building a NextJS Banking App Platform",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -182,85 +182,55 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "Fellow, Project Lead",
     company_name: "Girls Who Code",
     icon: gwc,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "August 2023 - December 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Participated in a four-month leadership development and career readiness program with senior leaders and engineers at RTX.",
+      "Designed, managed, and developed a Give Back Project that focuses on spreading awareness about homelessness and providing resources in New Jersey.",
+      "Networked with peers and industry professionals through cohort meetings for leadership development and project management, mock technical interviews, and speed networking.",
     ],
   },
   {
-    title: "Full stack Developer",
+    title: "CS Research Intern",
+    company_name: "New Jersey City University",
+    icon: njcu,
+    iconBg: "#E6DEDD",
+    date: "May 2023 - July 2023",
+    points: [
+      "Enhanced reinforcement learning algorithms using Python to achieve a 36% improvement in training efficiency for the Amazon Web Services (AWS) DeepRacer project, ensuring seamless deployment and faster model iterations.",
+      "Conducted comprehensive data analysis and model evaluation, leading to targeted optimizations that improved overall model performance and accuracy.",
+      "Communicated research findings through engaging presentations at a research symposium, bridging technical and non-technical audiences.",
+    ],
+  },
+  {
+    title: "Mathematics Tutor",
     company_name: "New Jersey City University",
     icon: njcu,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Facilitated group tutoring sessions for fellow university students, focusing on critical mathematics topics to help them pass the end-of-program exam, enabling them to satisfy math requirements and advance their studies quickly.",
+      "Monitored student performance and progress using MyMathTest, identifying key areas for improvement and customizing tutoring sessions to address specific needs, resulting in improved comprehension and an average grade increase of 59%.",
+      "Provided personalized one-on-one assistance on Zoom and in person and recorded attendance information in Microsoft Excel.",
     ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "New Jersey City University",
-    icon: njcu,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "CarePulse",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
-        name: "react",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "tailwind",
         color: "green-text-gradient",
       },
       {
@@ -315,4 +285,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
