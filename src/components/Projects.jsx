@@ -45,6 +45,25 @@ const Projects = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
+        <div className="border border-black-200 bg-[#04071d] rounded-lg h-96 md:h-full">
+          <Canvas>
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 5]} />
+            <Center>
+              <Suspense>
+                <group
+                  scale={0.0009}
+                  position={[0, -1.5, 0]}
+                  rotation={[0.1, 0, 0]}
+                >
+                  <DemoComputer texture={currenProject.texture} />
+                </group>
+              </Suspense>
+            </Center>
+            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+          </Canvas>
+        </div>
+
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
           <div className="absolute top-0 right-0">
             <img
@@ -115,25 +134,6 @@ const Projects = () => {
               />
             </button>
           </div>
-        </div>
-
-        <div className="border border-black-200 bg-[#04071d] rounded-lg h-96 md:h-full">
-          <Canvas>
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 5]} />
-            <Center>
-              <Suspense>
-                <group
-                  scale={0.0009}
-                  position={[0, -1.5, 0]}
-                  rotation={[0.1, 0, 0]}
-                >
-                  <DemoComputer texture={currenProject.texture} />
-                </group>
-              </Suspense>
-            </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} />
-          </Canvas>
         </div>
       </div>
     </div>
