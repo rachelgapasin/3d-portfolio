@@ -20,8 +20,7 @@ const Hero = () => {
           <p
             className={`${styles.heroSubText} mt-2 text-white-100 text-balance`}
           >
-            An aspiring web/frontend developer who's currently based
-            in 📍 Jersey City, NJ, USA
+            I create engaging websites that combine design and code
           </p>
         </div>
       </div>
