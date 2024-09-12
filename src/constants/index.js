@@ -385,3 +385,21 @@ export const experiences = [
     ],
   },
 ];
+
+export const socialMedia = [
+  {
+    id: 1,
+    img: "/assets/linkedin.svg",
+    href: "https://www.linkedin.com/in/rachelgapasin",
+  },
+  {
+    id: 2,
+    img: "/assets/github.svg",
+    href: "https://github.com/rachelgapasin",
+  },
+  {
+    id: 3,
+    img: "/assets/instagram.svg",
+    href: "https://www.instagram.com/rachelgapasinn",
+  },
+];
