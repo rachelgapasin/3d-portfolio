@@ -26,14 +26,10 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    //
-    // template_s6ne98q
-    // service_os4go0o
-
     emailjs
       .send(
-        "service_os4go0o",
-        "template_s6ne98q",
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Rachel",
@@ -41,7 +37,7 @@ const Contact = () => {
           to_email: "rachelgapasinn@gmail.com",
           message: form.message,
         },
-        "3m4zImq87wMU-PG5B"
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -59,7 +55,7 @@ const Contact = () => {
 
           console.log(error);
 
-          alert("Something went wrong.");
+          alert("Oh no, something went wrong. Please, try again.");
         }
       );
   };
@@ -88,6 +84,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
+              required
               className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -96,11 +93,12 @@ const Contact = () => {
               Email Address
             </span>
             <input
-              type="text"
+              type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
+              required
               className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -112,6 +110,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What's on your mind?"
+              required
               className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
