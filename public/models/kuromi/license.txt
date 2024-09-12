@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kuromi
+* source:	https://sketchfab.com/3d-models/kuromi-132e919a121a44f3b6039f1663a6f608
+* author:	Mora (https://sketchfab.com/MoraAzul)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kuromi" (https://sketchfab.com/3d-models/kuromi-132e919a121a44f3b6039f1663a6f608) by Mora (https://sketchfab.com/MoraAzul) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

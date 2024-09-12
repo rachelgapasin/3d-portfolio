@@ -1,5 +1,4 @@
-"use client";
-import React, { lazy, Suspense } from "react";
+import { lazy } from "react";
 
 const World = lazy(() => import("./Globe").then((m) => ({ default: m.World })));
 
@@ -391,16 +390,14 @@ export function GridGlobe() {
   ];
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
-        <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 px-4">
-          <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-          <div className="absolute w-full h-72 md:h-full">
-            <World data={sampleArcs} globeConfig={globeConfig} />
-          </div>
+    <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
+      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 px-4">
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <div className="absolute w-full h-72 md:h-full">
+          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
-    </Suspense>
+    </div>
   );
 }
 

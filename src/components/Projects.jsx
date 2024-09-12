@@ -7,6 +7,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import DemoComputer from "./canvas/DemoComputer";
+import Loader from "./Loader";
 
 const projectCount = projects.length;
 
@@ -50,7 +51,7 @@ const Projects = () => {
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 5]} />
             <Center>
-              <Suspense>
+              <Suspense fallback={<Loader />}>
                 <group
                   scale={0.0009}
                   position={[0, -1.5, 0]}
@@ -140,4 +141,4 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, "about");
+export default SectionWrapper(Projects, "work");
