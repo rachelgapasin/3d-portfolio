@@ -17,9 +17,6 @@ import {
   docker,
   njcu,
   gwc,
-  carepulse,
-  promptopia,
-  bahay,
   threejs,
 } from "../assets";
 
@@ -104,87 +101,14 @@ export const gridItems = [
 
 export const projects = [
   {
-    title: "Podcastr - AI Podcast Platform",
-    desc: "Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.",
-    subdesc:
-      "Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.",
-    href: "https://www.youtube.com/watch?v=zfAb95tJvZQ",
-    texture: "/textures/projects/project1.mp4",
-    logo: "/assets/project-logo1.png",
-    logoStyle: {
-      backgroundColor: "#2A1816",
-      border: "0.2px solid #36201D",
-      boxShadow: "0px 0px 60px 0px #AA3C304D",
-    },
-    spotlight: "assets/spotlight1.png",
-    tags: [
-      {
-        id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
-      },
-    ],
-  },
-  {
-    title: "LiveDoc - Real-Time Google Docs Clone",
-    desc: "LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.",
-    subdesc:
-      "With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.",
-    href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
-    texture: "/textures/projects/project2.mp4",
-    logo: "/assets/project-logo2.png",
-    logoStyle: {
-      backgroundColor: "#13202F",
-      border: "0.2px solid #17293E",
-      boxShadow: "0px 0px 60px 0px #2F6DB54D",
-    },
-    spotlight: "/assets/spotlight2.png",
-    tags: [
-      {
-        id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
-      },
-    ],
-  },
-  {
     title: "CarePulse - Health Management System",
     desc: "An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.",
     subdesc:
-      "With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.",
-    href: "https://www.youtube.com/watch?v=lEflo_sc82g",
-    texture: "/textures/projects/project3.mp4",
-    logo: "/assets/project-logo3.png",
+      "The integration of Twilio for confirmation messaging and Sentry for monitoring is also possible. However, due to not wanting to pay for their subscriptions, I chose to exclude them for this demo. Thanks for understanding! *For testing: admin passcode is 111111",
+    href: "https://carepulse-rg.vercel.app",
+    sourceCode: "https://github.com/rachelgapasin/carepulse-nextjs",
+    texture: "/textures/projects/carepulse.mp4",
+    logo: "/assets/logos/carepulse.png",
     logoStyle: {
       backgroundColor: "#60f5a1",
       background:
@@ -196,34 +120,153 @@ export const projects = [
     tags: [
       {
         id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
+        name: "Next.js",
+        path: "/assets/tech/nextjs.png",
       },
+
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "TypeScript",
+        path: "/assets/tech/typescript.png",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        name: "TailwindCSS",
+        path: "/assets/tech/tailwindcss.png",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "Appwrite",
+        path: "/assets/tech/appwrite.png",
       },
     ],
   },
   {
-    title: "Horizon - Online Banking Platform",
-    desc: "Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.",
+    title: "Promptopia - AI Prompt-Sharing Platform",
+    desc: "A simple way to discover, create, and share creative prompts to use when talking to chatbots like ChatGPT. It allows users to sign in, post/edit/delete their prompts, view their profiles and other users' profiles, copy prompts to clipboard, and search prompts by user, keyword, and tag/category.",
     subdesc:
-      "Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.",
-    href: "https://www.youtube.com/watch?v=PuOVqP_cjkE",
-    texture: "/textures/projects/project4.mp4",
-    logo: "/assets/project-logo4.png",
+      "Built with NextJS, Tailwind CSS, and MongoDB, Promptopia provides a dynamic interface for chatbot prompts. It features user authentication, prompt management, and robust search functionalities.",
+    href: "https://promptopia-rg.vercel.app",
+    sourceCode: "https://github.com/rachelgapasin/promptopia-nextjs",
+    texture: "/textures/projects/promptopia.mp4",
+    logo: "/assets/logos/promptopia.png",
+    logoStyle: {
+      backgroundColor: "#2A1816",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    spotlight: "assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/tech/nextjs.png",
+      },
+
+      {
+        id: 2,
+        name: "JavaScript",
+        path: "/assets/tech/javascript.png",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/tech/tailwindcss.png",
+      },
+      {
+        id: 4,
+        name: "MongoDB",
+        path: "/assets/tech/mongodb.png",
+      },
+    ],
+  },
+  {
+    title: "Bahay - Homelessness Resource Finder",
+    desc: "Bahay is a comprehensive resource platform supporting individuals facing homelessness in New Jersey. It connects users with essential services, including shelters, food banks, and veterans' programs, and features an informational quiz on shelters and volunteering opportunities.",
+    subdesc:
+      "The website is currently programmed in vanilla Javascript and CSS, but a version using ReactJS will be released in the future. When the new version is complete, I will update the links below, if necessary.",
+    href: "https://bahay.netlify.app",
+    sourceCode: "https://github.com/rachelgapasin/gwc-bahay",
+    texture: "/textures/projects/bahay.mp4",
+    logo: "/assets/logos/bahay.png",
+    logoStyle: {
+      backgroundColor: "#13202F",
+      border: "0.2px solid #17293E",
+      boxShadow: "0px 0px 60px 0px #2F6DB54D",
+    },
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "HTML",
+        path: "/assets/tech/html.png",
+      },
+
+      {
+        id: 2,
+        name: "JavaScript",
+        path: "/assets/tech/javascript.png",
+      },
+      {
+        id: 3,
+        name: "CSS",
+        path: "/assets/tech/css.png",
+      },
+      {
+        id: 4,
+        name: "Bootstrap",
+        path: "/assets/tech/bootstrap.png",
+      },
+    ],
+  },
+  {
+    title: "Wordist - Dictionary with Pictures",
+    desc: "An intuitive dictionary app that provides word meanings, accurate pronunciations in various accents, example sentences, and visual context through related photos, enhancing the learning experience and making it easier to grasp the full meaning and usage of words.",
+    subdesc:
+      "Developed using ReactJS and Bootstrap, Wordist pulls definitions and pronunciations from dictionaryapi.dev and retrieves related images via the SheCodes Images API. The app offers a clean, responsive design for easy navigation and efficient word lookups.",
+    href: "https://wordist.netlify.app",
+    sourceCode: "https://github.com/rachelgapasin/dictionary",
+    texture: "/textures/projects/wordist.mp4",
+    logo: "/assets/logos/wordist.png",
+    logoStyle: {
+      backgroundColor: "#1C1A43",
+      border: "0.2px solid #252262",
+      boxShadow: "0px 0px 60px 0px #635BFF4D",
+    },
+    spotlight: "/assets/spotlight5.png",
+    tags: [
+      {
+        id: 1,
+        name: "ReactJS",
+        path: "/assets/tech/reactjs.png",
+      },
+
+      {
+        id: 2,
+        name: "JavaScript",
+        path: "/assets/tech/javascript.png",
+      },
+      {
+        id: 3,
+        name: "CSS",
+        path: "/assets/tech/css.png",
+      },
+      {
+        id: 4,
+        name: "Bootstrap",
+        path: "/assets/tech/bootstrap.png",
+      },
+    ],
+  },
+  {
+    title: "Weather or Not - Weather App",
+    desc: "A dynamic weather app that delivers real-time weather information for your current location or any city you search. It provides key weather insights, temperature conversions, local time, and detailed forecasts to help you plan your day effectively.",
+    subdesc:
+      "Built with ReactJS and the OpenWeatherMap API, Weather or Not offers real-time data and remembers users' theme preferences with local storage. It features Axios for efficient data fetching and a responsive design for a seamless experience across devices.",
+    href: "https://weather-or-not.netlify.app",
+    sourceCode: "https://github.com/rachelgapasin/weather-app-react",
+    texture: "/textures/projects/weather-or-not.mp4",
+    logo: "/assets/logos/weather-or-not.png",
     logoStyle: {
       backgroundColor: "#0E1F38",
       border: "0.2px solid #0E2D58",
@@ -234,59 +277,23 @@ export const projects = [
       {
         id: 1,
         name: "React.js",
-        path: "/assets/react.svg",
+        path: "/assets/tech/reactjs.png",
       },
+
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "JavaScript",
+        path: "/assets/tech/javascript.png",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
-      },
-    ],
-  },
-  {
-    title: "Imaginify - AI Photo Manipulation App",
-    desc: "Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.",
-    subdesc:
-      "Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
-    href: "https://www.youtube.com/watch?v=Ahwoks_dawU",
-    texture: "/textures/projects/project5.mp4",
-    logo: "/assets/project-logo5.png",
-    logoStyle: {
-      backgroundColor: "#1C1A43",
-      border: "0.2px solid #252262",
-      boxShadow: "0px 0px 60px 0px #635BFF4D",
-    },
-    spotlight: "/assets/spotlight5.png",
-    tags: [
-      {
-        id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 2,
         name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        path: "/assets/tech/tailwindcss.png",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "OpenWeatherMap API",
+        path: "/assets/tech/openweathermap-api.png",
       },
     ],
   },
