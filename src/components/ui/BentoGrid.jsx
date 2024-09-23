@@ -5,7 +5,8 @@ import { BackgroundGradientAnimation } from "./GradientAnimation";
 import { GridGlobe } from "./GridGlobe";
 import MagicButton from "../MagicButton";
 import animationData from "../../constants/confetti.json";
-import { IoCopyOutline } from "react-icons/io5";
+import { IoDownloadOutline } from "react-icons/io5";
+import { MdFileDownloadDone } from "react-icons/md";
 
 export const BentoGrid = ({ className, children }) => {
   return (
@@ -59,41 +60,45 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.4] dark:border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 bg-[#abbaff] dark:bg-primary-dark",
         className
       )}
-      style={{
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-      }}
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
-          {img && (
+          {img && id !== 1 ? (
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-cover object-center")}
+            />
+          ) : (
+            <div
+              className={cn(
+                imgClassName,
+                "bg-b1-light dark:bg-b1-dark bg-cover bg-no-repeat bg-center"
+              )}
             />
           )}
         </div>
-        <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full opacity-80"
-          } `}
-        >
-          {spareImg && (
-            <img
-              src={spareImg}
-              alt={spareImg}
-              className="object-cover object-center w-full h-full"
-            />
-          )}
-        </div>
+        {id !== 1 && (
+          <div
+            className={`absolute right-0 -bottom-5 ${
+              id === 5 && "w-full opacity-80"
+            } `}
+          >
+            {spareImg && (
+              <img
+                src={spareImg}
+                alt={spareImg}
+                className="object-cover object-center w-full h-full"
+              />
+            )}
+          </div>
+        )}
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+            <div className="absolute z-50 inset-0 flex items-center justify-center font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
 
@@ -106,21 +111,21 @@ export const BentoGridItem = ({
           {id === 6 ? (
             <>
               <div
-                className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+                className={`text-black dark:text-white font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
               >
                 {title}
               </div>
-              <div className="font-sans font-extralight md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10 ">
+              <div className="text-secondary-light dark:text-secondary-dark font-sans font-extralight md:text-xs lg:text-base text-sm z-10 ">
                 {description}
               </div>
             </>
           ) : (
             <>
-              <div className="font-sans font-extralight md:max-w-36 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10 text-balance">
+              <div className="text-secondary-light dark:text-secondary-dark font-sans font-extralight md:max-w-36 md:text-xs lg:text-base text-sm z-10 text-balance">
                 {description}
               </div>
               <div
-                className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 text-balance`}
+                className={`text-black dark:text-white font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 text-balance`}
               >
                 {title}
               </div>
@@ -130,26 +135,26 @@ export const BentoGridItem = ({
           {id === 2 && <GridGlobe />}
 
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 text-black dark:text-white">
               <div className="flex flex-col gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center bg-[#b5c1fc] dark:bg-[#0e1027]"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#b5c1fc] dark:bg-[#0e1027]" />
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#b5c1fc] dark:bg-[#0e1027]"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center bg-[#b5c1fc] dark:bg-[#0e1027]"
                   >
                     {item}
                   </span>
@@ -170,7 +175,9 @@ export const BentoGridItem = ({
 
               <MagicButton
                 title={downloaded ? "You got it!" : "Download resume"}
-                icon={<IoCopyOutline />}
+                icon={
+                  downloaded ? <MdFileDownloadDone /> : <IoDownloadOutline />
+                }
                 position="left"
                 handleClick={handleDownload}
                 otherClasses="!bg-[#161A31]"

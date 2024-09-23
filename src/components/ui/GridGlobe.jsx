@@ -1,21 +1,22 @@
 import { lazy, Suspense } from "react";
-import Loader from "../Loader";
+import useTheme from "../../hooks/use-theme";
 
 const World = lazy(() => import("./Globe").then((m) => ({ default: m.World })));
 
 export function GridGlobe() {
+  const { theme } = useTheme();
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: theme === "light" ? "#abb9ff" : "#161d4c",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
-    emissive: "#062056",
+    emissive: theme === "light" ? "#abb9ff" : "#161d4c",
     emissiveIntensity: 0.1,
     shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
-    ambientLight: "#38bdf8",
-    directionalLeftLight: "#ffffff",
+    polygonColor: theme === "light" ? "#5464E5" : "rgba(255,255,255,0.7)",
+    ambientLight: "#161d4c",
+    directionalLeftLight: theme === "light" ? "#5464E5" : "#ffffff",
     directionalTopLight: "#ffffff",
     pointLight: "#ffffff",
     arcTime: 1000,

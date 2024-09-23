@@ -64,7 +64,7 @@ const Contact = () => {
     <div className="lg:mt-12 lg:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="max-w-[530px] flex-[0.75] bg-black-100 w-full mx-auto p-6 sm:p-8 rounded-2xl"
+        className="max-w-[530px] flex-[0.75] bg-[#abb9ff] dark:bg-black-100 w-full mx-auto p-6 sm:p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -75,7 +75,7 @@ const Contact = () => {
           className="mt-6 flex flex-col gap-6 sm:gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2 sm:mb-4">
+            <span className="text-black dark:text-white font-medium mb-2 sm:mb-4">
               Full Name
             </span>
             <input
@@ -85,11 +85,11 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your name?"
               required
-              className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary-light dark:bg-tertiary-dark py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary-light dark:placeholder:text-secondary-dark text-black dark:text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2 sm:mb-4">
+            <span className="text-black dark:text-white font-medium mb-2 sm:mb-4">
               Email Address
             </span>
             <input
@@ -99,11 +99,13 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your email?"
               required
-              className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary-light dark:bg-tertiary-dark py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary-light dark:placeholder:text-secondary-dark text-black dark:text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2 sm:mb-4">Message</span>
+            <span className="text-black dark:text-white font-medium mb-2 sm:mb-4">
+              Message
+            </span>
             <textarea
               rows={7}
               name="message"
@@ -111,13 +113,13 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's on your mind?"
               required
-              className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary-light dark:bg-tertiary-dark py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary-light dark:placeholder:text-secondary-dark text-black dark:text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary-light dark:bg-tertiary-dark py-3 px-8 outline-none text-black dark:text-white font-bold shadow-md dark:shadow-primary rounded-xl"
           >
             {loading ? "Sending..." : "Send"}
           </button>

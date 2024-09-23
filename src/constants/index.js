@@ -38,12 +38,12 @@ export const navLinks = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "I prioritize client collaboration, fostering open communication",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: b1,
+    img: "",
     spareImg: "",
   },
   {
@@ -396,17 +396,22 @@ export const experiences = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/assets/linkedin.svg",
-    href: "https://www.linkedin.com/in/rachelgapasin",
+    icon: "faEnvelope",
+    href: "mailto:rachelgapasinn@gmail.com",
   },
   {
     id: 2,
-    img: "/assets/github.svg",
-    href: "https://github.com/rachelgapasin",
+    icon: "faLinkedin",
+    href: "https://www.linkedin.com/in/rachelgapasin",
   },
   {
     id: 3,
-    img: "/assets/instagram.svg",
+    icon: "faGithub",
+    href: "https://github.com/rachelgapasin",
+  },
+  {
+    id: 4,
+    icon: "faInstagram",
     href: "https://www.instagram.com/rachelgapasinn",
   },
 ];

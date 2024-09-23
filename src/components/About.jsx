@@ -16,7 +16,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="text-secondary-light dark:text-secondary-dark mt-3 text-[17px] max-w-3xl leading-[30px]"
       >
         I love to code and create things. I'm currently seeking Web Development,
         Front-end Development, and UX/UI Design positions. Let's build something

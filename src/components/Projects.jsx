@@ -8,6 +8,13 @@ import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import DemoComputer from "./canvas/DemoComputer";
 import Loader from "./Loader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faArrowRight,
+  faArrowLeft,
+  faUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
 
 const projectCount = projects.length;
 
@@ -35,7 +42,7 @@ const Projects = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="text-secondary-light dark:text-secondary-dark mt-3 text-[17px] max-w-3xl leading-[30px]"
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -46,7 +53,7 @@ const Projects = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="border border-black-200 bg-[#04071d] rounded-lg h-96 md:h-full">
+        <div className="bg-[#abbaff] dark:bg-primary-dark rounded-lg h-96 md:h-full">
           <Canvas>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 5]} />
@@ -65,7 +72,7 @@ const Projects = () => {
           </Canvas>
         </div>
 
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-xl rounded-lg">
           <div className="absolute top-0 right-0">
             <img
               src={currentProject.spotlight}
@@ -78,15 +85,11 @@ const Projects = () => {
             className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
             style={currentProject.style}
           >
-            <img
-              src={currentProject.logo}
-              alt="logo"
-              className="w-10 h-10 shadow-sm"
-            />
+            <img src={currentProject.logo} alt="logo" className="w-10 h-10" />
           </div>
 
-          <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">
+          <div className="flex flex-col gap-5 text-black dark:text-white my-5">
+            <p className=" text-2xl font-semibold animatedText">
               {currentProject.title}
             </p>
             <p className="animatedText">{currentProject.desc}</p>
@@ -96,21 +99,30 @@ const Projects = () => {
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
-                <div key={index} className="tech-logo" title={tag.name}>
+                <div
+                  key={index}
+                  className="w-10 h-10 rounded-md p-2 bg-accent-light dark:bg-neutral-100 bg-opacity-20 dark:bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center"
+                  title={tag.name}
+                >
                   <img src={tag.path} alt={tag.name} />
                 </div>
               ))}
             </div>
 
             <div className="flex items-center sm:items-end gap-3">
-              <p className="hidden xs:block">Fun links:</p>
+              <p className="hidden xs:block text-black dark:text-white">
+                Fun links:
+              </p>
               <a
                 href={currentProject.sourceCode}
                 target="_blank"
                 rel="noreferrer"
                 className="flex gap-2 cursor-pointer my-auto"
               >
-                <img src="/assets/github.svg" alt="arrow" className="w-5 h-5" />
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="w-5 h-5 text-black dark:text-white"
+                />
               </a>
               <a
                 href={currentProject.href}
@@ -118,10 +130,9 @@ const Projects = () => {
                 rel="noreferrer"
                 className="flex gap-2 cursor-pointer my-auto"
               >
-                <img
-                  src="/assets/arrow-up-right.svg"
-                  alt="arrow"
-                  className="w-5 h-5"
+                <FontAwesomeIcon
+                  icon={faUpRightFromSquare}
+                  className="w-5 h-5 text-black dark:text-white"
                 />
               </a>
             </div>
@@ -132,20 +143,18 @@ const Projects = () => {
               onClick={() => handleNavigation("previous")}
               className="arrow-btn"
             >
-              <img
-                src="/assets/left-arrow.png"
-                alt="left arrow"
-                className="w-4 h-4"
+              <FontAwesomeIcon
+                icon={faArrowLeft}
+                className="w-5 h-5 text-black dark:text-white"
               />
             </button>
             <button
               onClick={() => handleNavigation("next")}
               className="arrow-btn"
             >
-              <img
-                src="/assets/right-arrow.png"
-                alt="right arrow"
-                className="w-4 h-4"
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="w-5 h-5 text-black dark:text-white"
               />
             </button>
           </div>
