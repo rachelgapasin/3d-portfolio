@@ -53,7 +53,7 @@ const Projects = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="bg-[#abbaff] dark:bg-primary-dark rounded-lg h-96 md:h-full">
+        <div className="hidden xs:block bg-[#abbaff] dark:bg-primary-dark rounded-lg h-96 lg:h-full">
           <Canvas>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 5]} />
@@ -71,6 +71,19 @@ const Projects = () => {
             <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
           </Canvas>
         </div>
+
+        {/* Mobile Devices */}
+        <video
+          key={currentProject.texture}
+          width="750"
+          height="500"
+          autoPlay
+          controls
+          loop
+          className="xs:hidden rounded-lg"
+        >
+          <source src={currentProject.texture} type="video/mp4" />
+        </video>
 
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-xl rounded-lg">
           <div className="absolute top-0 right-0">

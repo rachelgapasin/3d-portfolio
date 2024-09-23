@@ -50,7 +50,7 @@ module.exports = {
         "logo-dark": "url('/logo-dark.png')",
         "violet-gradient":
           "-webkit-linear-gradient(-90deg, #9153FF 0%, #3c335000 100%)",
-        "b1-dark": "url('/assets/herobg-dark.png')",
+        "b1-dark": "url('/assets/about/b1-dark.png')",
       },
     },
   },
